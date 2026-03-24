@@ -4,10 +4,10 @@
   <link rel="icon" href="./static/images/icon.png">
   <meta charset="utf-8">
   <meta name="description"
-        content="VTimeCoT: Thinking by Drawing for Video Temporal Grounding and Reasoning">
-  <meta name="keywords" content="Hand, 3D, Reconstruction">
+        content="VideoFocus-R1: Agentic RL with Dynamic Spatio-Temporal Focus \\ for Long Video Understanding">
+  <meta name="keywords" content="Video Understanding, Agent">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VTimeCoT: Thinking by Drawing for Video Temporal Grounding and Reasoning</title>
+  <title>VideoFocus-R1: Agentic RL with Dynamic Spatio-Temporal Focus for Long Video Understanding</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -60,21 +60,24 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">VTimeCoT: Thinking by Drawing for Video Temporal Grounding and Reasoning</h1>          
+          <h1 class="title is-1 publication-title">VideoFocus-R1: Agentic RL with Dynamic Spatio-Temporal Focus  for Long Video Understanding</h1>          
           <div class="is-size-4 publication-authors">
             <span class="author-block">
-              <a href="">Jinglei Zhang</a>*<sup>1</sup>,</span>
+              <a href="">Jinglei Zhang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?hl=zh-CN&user=FqNrU2QAAAAJ">Yuanfan Guo</a>*<sup>2</sup>,
+              <a href="https://scholar.google.com/citations?user=YiDxCoAAAAAJ&hl=zh-CN">Yihan Zeng</a><sup>2</sup>,</span> 
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=FqNrU2QAAAAJ">Yuanfan Guo</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://rolpotamias.github.io/">Rolandos Alexandros Potamias</a><sup>3</sup>,
+              <a href="">Bingde Liu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Wei Zhang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://rolpotamias.github.io/">Rolandos Alexandros Potamias</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://jiankangdeng.github.io/">Jiankang Deng</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://xuhangcn.github.io/">Hang Xu</a><sup>2</sup>,
+              <a href="https://jiankangdeng.github.io/">Jiankang Deng</a><sup>4</sup>,
             </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=syoPhv8AAAAJ&hl=en">Chao Ma</a>&dagger;<sup>1</sup>,</span>
@@ -83,11 +86,12 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University</span>&nbsp;
             <span class="author-block"><sup>2</sup>Noah's Ark Lab</span>&nbsp;
-            <span class="author-block"><sup>3</sup>Imperial College London</span>
+            <span class="author-block"><sup>3</sup>ByteDance</span>&nbsp;
+            <span class="author-block"><sup>4</sup>Imperial College London</span>
           </div>
           <br>
           <span class="author-block">
-            <h1 class="title is-size-4  publication-venue">ICCV 2025</h1>
+            <h1 class="title is-size-4  publication-venue">CVPR 2026</h1>
           </span>
           <br>
 
@@ -96,7 +100,7 @@
               <!-- PDF Link. -->
               <!-- arXiv Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2510.14672"
+                <a href="https://arxiv.org/abs/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -112,7 +116,25 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (Coming soon)</span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Model</span>
                   </a>
               </span>
              
@@ -142,7 +164,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In recent years, video question answering based on multimodal large language models (MLLM) has garnered considerable attention, due to the benefits from the substantial advancements in LLMs. However, these models have a notable deficiency in the domains of video temporal grounding and reasoning, posing challenges to the development of effective real-world video understanding systems. Inspired by how humans use video players to interact with the progress bar for video comprehension, we introduce VTimeCoT, a simple yet effective training-free framework, designed for high-performance video grounding and reasoning. The proposed framework incorporates two novel visual tools of the progress bar: a plug-and-play progress bar integration tool and a high-efficiency highlighting tool. In addition, to address the limitations of conventional text-based chain-of-thought (CoT) approaches, we introduce a visuotemporal CoT process that integrates cross-modality reasoning across both video and text. Our approach demonstrates significant performance improvements on both Qwen2VL-7B and GPT4o baselines in tasks of video temporal grounding and reasoning-based question answering. Finally, we showcase that the proposed framework achieves a compositional and interpretable reasoning process.
+            Despite the advent of reasoning multimodal large language model (MLLM), chain-of-thought for long video understanding remains challenging due to long context and complex spatio-temporal information. Existing reinforcement learning (RL) methods for video reasoning MLLM rely on fixed uniform frame sampling, limiting their ability to focus on key events or prominent objects. Such a limitation prohibits their direct use in long video settings, where fixed-frame samples provide only sparse and mostly irrelevant information. In this work, we present VideoFocus-R1, a reinforced agentic model for effective long video reasoning with focused spatio-temporal evidence. We propose an agent-style reasoning process that employs dynamic video processing tools, including a tool to search for key events for slow-motion playback and another tool for detecting prominent objects to highlight them. To facilitate effective supervised fine-tuning (SFT) training for cold-start, we create VideoFocus-SFT-10k, a high-quality video tool-use dataset developed using a carefully designed automated synthesis pipeline. To improve generalization and build a robust agent model, we leverage a Group Relative Policy Optimization (GRPO)–based algorithm for video agents to enhance the model’s reasoning capability. Through extensive quantitative evaluations, we demonstrate that VideoFocus-R1 significantly improves performance on both regular-length and long-video question-answering benchmarks. Moreover, we showcase that the proposed model achieves a reasoning process with explicit spatio-temporal evidence.
           </p>
         </div>
       </div>
@@ -161,13 +183,13 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
         <p>
-          We propose \( \textbf{VTimeCoT} \), a \( \textbf{V} \)isual \( \textbf{Time} \) \( \textbf{C} \)hain-\( \textbf{o} \)f-\( \textbf{T} \)hought framework for video temporal grounding and reasoning. VTimeCoT constructs cross-modality reasoning across both video and text, which enables the MLLM to utilize progress bar tools to annotate the time progression and highlight the key relevant segments to answer complex temporal questions. 
+          The policy model is first initialized with an SFT-based cold start and subsequently optimized through GRPO-based agent reinforcement learning. During RL, the video, question, and an initial prompt defining the available tools are fed into the policy model, which generates G groups of rollout trajectories. In each trajectory, the policy model generates step-by-step thoughts and tool calls, producing the final answer at the last step. These tool calls are parsed, executed online, and their results are incorporated into the next reasoning step. Finally, the policy model is updated using rule-based rewards. 
         </p>
         <div>
-            <img src="./static/images/vtimecot_method.png" alt="method" class="center">
+            <img src="./static/images/method.png" alt="method" class="center">
         </div>
         <p>
-          On the left, we demonstrate how the framework iteratively generates thoughts and actions, which dynamically updates the video memory with an overlaid progress bar for reasoning. On the right, we illustrate two novel tools that integrate the frame-sync visual progress bar and highlight key moments.  
+          Dynamic video processing is realized through temporal and spatial visual tools during the rollout process. For key events identified during the model's reasoning, the model can invoke event search tools to get key time ranges and perform slow-motion, high-FPS playback. For key objects identified during reasoning, the model can invoke object detection tools to track them with bounding boxes and textual labels. 
         </p>
         </div>
       </div>
@@ -182,10 +204,10 @@
       <h2 class="title is-3">Qualitative results</h2>
       <div class="content has-text-justified">
       <p>
-        Through reasoning that integrates the progress bar and highlights, VTimeCoT accurately answers questions related to temporal counting and order, which GPT-4o falls short.
+        Here we show some examples of agents in action. During reasoning, VideoFocus-R1 uses the segment search tool to play key events in slow motion and utilizes the object detection tool to highlight critical objects. This facilitates accurate final answers while providing explicit spatiotemporal visual evidence.
       </p>
       <div>
-          <img src="./static/images/vtimecot_result.png" alt="method" class="center">
+          <img src="./static/images/results.png" alt="method" class="center">
       </div>
       </div>
     </div>
@@ -197,10 +219,10 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@inproceedings{zhang2025vtimecot,
-      title={VTimeCoT: Thinking by Drawing for Video Temporal Grounding and Reasoning},
-      author={Zhang, Jinglei and Guo Yuanfan and Potamias, Rolandos Alexandros and Deng, Jiankang and Xu, Hang and Ma, Chao},
-      booktitle={Proceedings of the International Conference on Computer Vision},
-      year={2025}
+      title={VideoFocus-R1: Agentic RL with Dynamic Spatio-Temporal Focus  for Long Video Understanding},
+      author={Zhang, Jinglei and Zeng, Yihan and Guo, Yuanfan and Liu, Bingde and Zhang, Wei and Potamias, Rolandos Alexandros and Deng, Jiankang and Ma, Chao},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+      year={2026}
     }
 </code></pre>
   </div>
