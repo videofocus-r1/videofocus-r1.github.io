@@ -150,7 +150,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/teaser.png" alt="teaser" class="center">
+      <img src="./static/images/video_rl_web_image.png" alt="teaser" class="center">
     </div>
   </div>
 </section>
@@ -186,7 +186,7 @@
           The policy model is first initialized with an SFT-based cold start and subsequently optimized through GRPO-based agent reinforcement learning. During RL, the video, question, and an initial prompt defining the available tools are fed into the policy model, which generates G groups of rollout trajectories. In each trajectory, the policy model generates step-by-step thoughts and tool calls, producing the final answer at the last step. These tool calls are parsed, executed online, and their results are incorporated into the next reasoning step. Finally, the policy model is updated using rule-based rewards. 
         </p>
         <div>
-            <img src="./static/images/method.png" alt="method" class="center">
+            <img src="./static/images/video_rl_method.png" alt="method" class="center">
         </div>
         <p>
           Dynamic video processing is realized through temporal and spatial visual tools during the rollout process. For key events identified during the model's reasoning, the model can invoke event search tools to get key time ranges and perform slow-motion, high-FPS playback. For key objects identified during reasoning, the model can invoke object detection tools to track them with bounding boxes and textual labels. 
@@ -207,7 +207,7 @@
         Here we show some examples of agents in action. During reasoning, VideoFocus-R1 uses the segment search tool to play key events in slow motion and utilizes the object detection tool to highlight critical objects. This facilitates accurate final answers while providing explicit spatiotemporal visual evidence.
       </p>
       <div>
-          <img src="./static/images/results.png" alt="method" class="center">
+          <img src="./static/images/video_rl_qualitative.png" alt="method" class="center">
       </div>
       </div>
     </div>
